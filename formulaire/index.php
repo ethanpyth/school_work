@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="controllers/controller.php" method="post">
+    <form action="action.php" method="post">
         Nom : <input type="text" name="name" placeholder="Entrer le nom"><br>
         Postnom : <input type="text" name="lastname" placeholder="Entrer le postnom"><br>
         Prenom : <input type="text" name="firstname" placeholder="Entrer le prénom"><br>
@@ -15,7 +15,7 @@
         <select name="gender" id="">
             <option value="M">Masculin</option>
             <option value="F">Feminin</option>
-        </select name="gender"><br>
+        </select><br>
         Promotion : <input type="text" name="promotion" placeholder="Entrer la promotion"><br>
         Email : <input type="email" name="email"placeholder="Entrer l'addresse mail"><br>
         <input type="submit" value="submit">
