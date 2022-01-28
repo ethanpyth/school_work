@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST)){
+if (isset($_POST) && $_POST != []){
     $name = $_POST['name'];
     $lastname = $_POST['lastname'];
     $firstname = $_POST['firstname'];
