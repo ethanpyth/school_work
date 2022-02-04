@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>PAGE DE PROFIL</title>
 </head>
 <body>
@@ -15,13 +16,13 @@
     ?>
     <p>Bonjour Mr. <?php echo strtoupper($_SESSION[$_COOKIE['name']]['firstname']) ?></p>
     <p>Voici vos informations : </p>
-    <?php
-        echo 'NOM : <strong>' . strtoupper($_SESSION[$_COOKIE['name']]['name']) . '</strong> <br>
-             POSTNOM : <strong>' . strtoupper($_SESSION[$_COOKIE['name']]['lastname']) . '</strong> <br>
-             PRENOM : <strong>' . strtoupper($_SESSION[$_COOKIE['name']]['firstname']) . '</strong> <br>
-             MOT DE PASSE : <strong>' . strtoupper($_SESSION[$_COOKIE['name']]['pwd']) . '</strong> <br>
-             ADRESSE MAIL : <strong>' . strtoupper($_SESSION[$_COOKIE['name']]['email']) . '</strong> <br>
-             TELEPHONE : <strong>' . strtoupper($_SESSION[$_COOKIE['name']]['numphone']) . '</strong> <br>'
-    ?>
+    <div class="lign">
+        <p>NOM : <strong> <?php echo strtoupper($_SESSION[$_COOKIE['name']]['name']) ?> </strong> </p>
+        <p> POSTNOM : <strong><?php echo strtoupper($_SESSION[$_COOKIE['name']]['lastname']) ?> </strong> </p>
+        <p> PRENOM : <strong><?php echo strtoupper($_SESSION[$_COOKIE['name']]['firstname']) ?> </strong></p>
+        <p> MOT DE PASSE : <strong> <?php echo strtoupper($_SESSION[$_COOKIE['name']]['pwd']) ?></strong></p>
+        <p> ADRESSE MAIL : <strong> <?php echo strtoupper($_SESSION[$_COOKIE['name']]['email']) ?> </strong></p>
+        <p> TELEPHONE : <strong> <?php echo strtoupper($_SESSION[$_COOKIE['name']]['numphone']) ?> </strong></p>
+    </div>
 </body>
 </html>
