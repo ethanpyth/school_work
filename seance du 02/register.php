@@ -27,8 +27,8 @@
         <div>
             Genre : 
                 <select name="gender">
-                    <option value="M">Masculin</option>
-                    <option value="F">Feminin</option>
+                    <option value="Masculin">Masculin</option>
+                    <option value="Feminin">Feminin</option>
                 </select>
         </div><br>
         <div>

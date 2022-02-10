@@ -20,7 +20,7 @@
             Mot de passe : <input type="password" name="pwd">
         </div><br>
         <input type="hidden" name="page_from" value="login">
-        <input type="submit" value="Envoyer">
+        <input type="submit" value="Submit">
     </form>
     <p>Vous n'avez pas de compte <a href="register.php">inscrivez vous en cliquant ici</a></p>
 </body>
