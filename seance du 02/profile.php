@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +11,14 @@
 <body>
     
     <?php 
-    session_start();
+    
     echo '<h2> Profil de ' . strtoupper($_SESSION[$_COOKIE['name']]['name']) . ' ' . strtoupper($_SESSION[$_COOKIE['name']]['lastname']) . '</h2>';
 
     ?>
-    <p>Bonjour Mr. <?php echo strtoupper($_SESSION[$_COOKIE['name']]['firstname']) ?></p>
+    <p>Bonjour <?php echo ($_SESSION[$_COOKIE['name']]['gender'] == 'Masculin') ? 'Mr. ' : 'Mme. ' . strtoupper($_SESSION[$_COOKIE['name']]['firstname']) ?></p>
     <p>Voici vos informations : </p>
     <div class="lign">
-        <p>NOM : <strong> <?php echo strtoupper($_SESSION[$_COOKIE['name']]['name']) ?> </strong> </p>
+        <p> NOM : <strong> <?php echo strtoupper($_SESSION[$_COOKIE['name']]['name']) ?> </strong> </p>
         <p> POSTNOM : <strong><?php echo strtoupper($_SESSION[$_COOKIE['name']]['lastname']) ?> </strong> </p>
         <p> PRENOM : <strong><?php echo strtoupper($_SESSION[$_COOKIE['name']]['firstname']) ?> </strong></p>
         <p> MOT DE PASSE : <strong> <?php echo strtoupper($_SESSION[$_COOKIE['name']]['pwd']) ?></strong></p>
