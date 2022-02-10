@@ -10,7 +10,9 @@
         'gender' => 'Masculin'
     );
 
-    if(isset($_POST) && !empty($_POST)) {
+    if(
+        isset($_POST) && (!empty($_POST['name']) && !empty($_POST['lastname']) && !empty($_POST['firstname']) &&
+            !empty($_POST['email']) && !empty($_POST['pwd']) && !empty($_POST['numphone']) && !empty($_POST['gender']))) {
         if ($_POST['page_from'] == 'register' && !isset($_SESSION[$_POST['name']])) {
             $_SESSION[$_POST['name']] = array(
                 'name' => $_POST['name'],
@@ -37,5 +39,12 @@
             }
         }
     }else{
-        header('Location: login.php');
+        if($_POST['page_from'] == 'register'){
+            include_once('register.php');
+            echo 'veuillez remplir tous les champs';
+        }else{
+            include_once('register.php');
+            echo 'veuillez remplir tous les champs';
+        }
+
     }
