@@ -9,7 +9,7 @@
         'numphone' => '+243999943316',
         'gender' => 'Masculin'
     );
-var_dump($_SESSION);
+
     if(isset($_POST)) {
         if ($_POST['page_from'] == 'register') {
             if(
@@ -18,7 +18,6 @@ var_dump($_SESSION);
                 !empty($_POST['gender'])
             ){
                 if(!isset($_SESSION[$_POST['name']])){
-
                     $_SESSION[$_POST['name']] = array(
                         'name' => $_POST['name'],
                         'lastname' => $_POST['lastname'],
